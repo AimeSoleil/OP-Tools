@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['app.py'],
-             pathex=['/Users/julian/Documents/App'],
+             pathex=['D:\\GitHub\\OP-Tools'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -27,7 +27,3 @@ exe = EXE(pyz,
           upx=True,
           runtime_tmpdir=None,
           console=False )
-app = BUNDLE(exe,
-             name='app.app',
-             icon=None,
-             bundle_identifier=None)
