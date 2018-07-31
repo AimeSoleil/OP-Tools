@@ -48,7 +48,7 @@ def csv_to_excel(input_csv):
     output_xlsx = input_csv.replace(".csv", ".xlsx")
     wb = xlsxwriter.Workbook(output_xlsx)
     ws = wb.add_worksheet("Sheet 1")
-    with open(input_csv, mode="r") as csvfile:
+    with open(input_csv, mode="r", encoding="utf-8") as csvfile:
         table = csv.reader(csvfile)
         i = 0
         for row in table:
@@ -109,7 +109,7 @@ def write_worksheet_row(wb, ws, row, row_index):
 def process(input, temp_output):
     year = datetime.datetime.today().year
     holidays = Holidays(year)
-    with open(input, 'r', encoding='utf8') as in_csv, open(temp_output, 'w', newline='') as out_csv:
+    with open(input, 'r', encoding='utf8') as in_csv, open(temp_output, 'w', encoding='utf8', newline='') as out_csv:
         writer = csv.writer(out_csv, quotechar='"', quoting=csv.QUOTE_MINIMAL)
         reader = csv.reader(in_csv)
 
