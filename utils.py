@@ -22,7 +22,7 @@ class Holidays:
             return False
 
     def loadHolidaysData(self, year):
-        ''' http://www.easybots.cn/holiday_api.net '''
+        ''' http://www.easybots.cn/api/holiday.php?m=202001 '''
         holidaysFile = FILE_PATH.format(year)
         holidaysData = {}
         with open(holidaysFile, 'r', encoding='utf8') as holidays:
