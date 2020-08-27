@@ -4,7 +4,7 @@ import json
 import datetime
 
 YYYYMMDD = '%Y-%m-%d'
-FILE_PATH = 'holidays_{0}.json'
+FILE_PATH = 'holiday_data/holidays_{0}.json'
 
 
 class Holidays:
