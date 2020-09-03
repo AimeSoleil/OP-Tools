@@ -43,7 +43,7 @@ class App:
         mainloop()
 
     def openInputFile(self):
-        filePath = filedialog.askopenfilename(title='打开文件', filetypes=[('xlsx', '*.xlsx')])
+        filePath = filedialog.askopenfilename(title='打开文件', filetypes=[('xlsx', '*.xlsx'), ('xls', '*.xls')])
         self.entry_input.delete(0, END)
         self.entry_input.insert(END, filePath)
         self.text_log.insert(END, "{0}Input: {1}{2}".format(getCurrentTime(), filePath, lineBreak()))
